@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./images/icons/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon/favicon-16x16.png">
+        <link href="./style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <title>PH7 Filmes</title>
+    </head>
+
+    <body>
+        <div class="preload">
+            <img src="./images/icons/load.gif"> 
+        </div>
+
+        <div class="model">
+            <div class="videoItem">
+                <div class="cardBox">
+                    <button href="" onclick="openVideo()"></button>
+                    <img src="" />
+                </div>
+                <p></p>
+            </div>
+
+            <div class="videoMain">
+                <div style="position: relative;">
+                    <iframe title="vimeo-player" src="" frameborder="0" width="1280" height="720" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullScreen">
+            <button onclick="closeModal()"></button>
+            <iframe title="vimeo-player" src="" frameborder="0" allow="autoplay; fullscreen;" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        </div>
+
+        <header class="asidePanel">
+            <div class="infos">
+                <div class="logo">
+                    <a href="/">
+                        <img src="./images/logo.png" alt="Logotipo PH7 Filmes">
+                    </a>  
+                </div>
+
+                <div class="infoText">
+                    <p>PRODUTORA AUDIOVISUAL</p>
+                    <p>INSTITUCIONAIS | EVENTOS |
+                        INTERNET | VÍDEO AULAS |
+                        PUBLICIDADE | ENDOMARKETING</p>
+                </div>
+
+                <div class="contact">
+                    <div class="email">
+                        <a href="mailto:contato@ph7filmes.com.br">
+                            <img src="./images/icons/mail.png" alt="Ícone e-mail">
+                        </a>
+                    </div>
+
+                    <div class="insta">
+                        <a href="https://www.instagram.com/ph7filmes/" target="_blank">
+                            <img src="./images/icons/insta.png" alt="Ícone Instagram">
+                        </a>
+                    </div>
+
+                    <div class="phone">
+                        <a href="https://api.whatsapp.com/send?phone=5551980606107" target="_blank">
+                            <img src="./images/icons/whats.png" alt="Ícone whatsapp">
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                © 2022. Todos os direitos reservados.
+            </div>
+        </header>
+
+        <main>
+            <section class="container">
+                <div class="downArrow">
+                    <a href="#secondaryVideos"> <img src="./images/icons/down.png"> </a>
+                </div>
+        
+                <div class="upArrow">
+                    <a href="#mainVideo"> <img src="./images/icons/up.png"> </a>
+                </div>
+
+                <div class="mainVideo" id="mainVideo"></div>
+                <div class="secondaryVideos" id="secondaryVideos"></div>
+            </section>
+
+            <footer class="footerMobile">© 2022. Todos os direitos reservados.</footer>
+        </main>
+        
+        <script type="text/javascript" src="videos.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </body>
+</html>

@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #F3F3F3;
+    background-color: #eeeeee;
+    display: flex;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #313131;
+    width: 270px;
+    height: 100vh;
+    border-right: 2px solid #92C027;
+}
+
+main{
+    width: 100vw;
+    background-color: #eeeeee;
+    height: 100vh;
+    color:#313131;
+    font-weight: bold;
+    overflow-y: scroll;
+}
+
+.mainVideo {
+    margin-bottom: 15px;
+}
+
+.mainVideo div{
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+}
+
+.secondaryVideos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.videoItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.videoItem .cardBox {
+    position: relative;
+    width: 100%;
+}
+
+.videoItem div img{
+    width: 100%;
+    border-radius: 15px;
+}
+.videoItem div button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+    background-image: url(./images/icons/play.png);
+    background-color: rgb(0,0,0,0);
+    background-size: contain;
+    padding: 12px 24px;
+    border: none;
+    opacity: .8;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.videoItem div button:hover {
+    opacity: 1;
+  }
+
+.videoItem iframe {
+    position:relative; 
+    display:block; 
+    width: 100%;
+}
+
+.videoItem p{
+    margin-top: 10px;
+}
+
+.model {
+    display: none;
+}
+
+.vp-player-ui-overlays {
+    display: none;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    padding: 30px;
+}
+
+.logo img{
+    width: 130px;
+    transition: transform .3s;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+.infoText p:first-child {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.infoText p:last-child {
+    margin: 20px;
+    margin-top: 0px;
+    font-size: .8rem;
+    line-height: 23px;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.infoText p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.email a, .insta a, .phone a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.email a:hover, .insta a:hover, .phone a:hover {
+    color: #F3F3F3;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.email a img, .insta a img, .phone a img{
+    width: 35px;
+    transition: transform .3s;
+}
+
+.email a img:hover, .insta a img:hover, .phone a img:hover{
+    transform: scale(1.2);
+}
+
+.fullScreen{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: #313131;
+}
+
+.fullScreen button {
+    background-image: url(./images/icons/close.png);
+    background-color: rgb(0,0,0,0);
+    background-size: contain;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 1;
+}
+
+.fullScreen button:hover {
+    opacity: .8;
+}
+
+.footer{
+    display: flex;
+    font-size: .8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.footerMobile {
+    display: none;
+}
+
+.content {
+    display:none;
+}
+
+.preload { 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+}
+
+.upArrow{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: calc(113.5%/2);
+    filter: invert(1);
+}
+
+.upArrow img {
+    width: 35px;
+    transition: transform .3s;
+    opacity: .8;
+}
+
+.upArrow img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.upArrow img a{
+    cursor: pointer;  
+}
+
+.downArrow{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: calc(112%/2);
+    filter: invert(1);
+}
+
+.downArrow img {
+    width: 55px;
+    transition: transform .3s;
+    opacity: .8;
+}
+
+.downArrow img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.downArrow img a{
+    cursor: pointer;  
+}
+
+
+@media (max-width: 500px) {
+    .upArrow {
+        left: calc(92%/2);
+    } 
+    
+    .downArrow {
+        left: calc(87%/2);
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        border-right: 0px;
+        border-bottom: 2px solid #92C027;
+        width: 100vw;
+        height: 16.5vh;
+    }
+
+    .infos {
+        display: grid;
+        grid-template-areas: "logo texto""logo contato";
+    }
+    
+    .infoText {
+        grid-area: texto;
+    }
+
+    .infoText p:last-child {
+        margin: 12px;
+        margin-right: 20px;
+        font-size: .6rem;
+    }
+
+    main {
+        height: 83vh
+    }
+
+    .mainVideo div {
+        height: 29vh !important;
+    }
+
+    .contact {
+        grid-area: contato; 
+        gap: 1.5rem;
+    }
+
+    .videoMain {
+        height: 27vh !important;
+    }
+
+    .secondaryVideos {
+        grid-template-columns: 100%;
+    }
+
+    .logo {
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        padding: 20px 20px 10px 20px;
+    }
+
+    .logo a img{
+        width: 100px;
+    }
+
+    .footer{
+        display: none;
+    }
+}
+
+@media (max-height: 750px) {
+    header {
+        height: 19.5vh;
+    }
+
+    main {
+        height: 80.5vh;
+    }
+}
+
+@media (max-height: 670px) {
+    header {
+        height: 21vh;
+    }
+}
+
+@media (max-width: 300px) {
+    .infoText p:last-child {
+        line-height: 15px;
+    }
+
+    header {
+        height: 25vh;
+    }
+}
+
