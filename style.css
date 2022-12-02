@@ -189,6 +189,7 @@ a {
     position: fixed;
     z-index: 3;
     background-color: #313131;
+    overflow-y: hidden;
 }
 
 .fullScreen button {
@@ -290,10 +291,12 @@ a {
 
 @media (max-width: 500px) {
     .upArrow {
+        display: block !important;
         left: calc(92%/2);
     } 
     
-    .downArrow {
+    .downArrow a{
+        display: none;
         left: calc(87%/2);
     }
 
