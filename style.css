@@ -290,8 +290,8 @@ a {
 
 
 @media (max-width: 500px) {
-    .upArrow {
-        display: block !important;
+    .upArrow a{
+        display: none;
         left: calc(92%/2);
     } 
     
