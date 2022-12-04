@@ -61,11 +61,9 @@ $(document).ready(function() {
       let upArrowButton = document.querySelector('.upArrow');
 
       if(downArrowButton.style.display != 'none'){
-        console.log('Entrou no block')
         downArrowButton.style.display = 'none';
         upArrowButton.style.display = 'block';
       } else {
-        console.log('Entrou no block2')
         downArrowButton.style.display = 'block';
         upArrowButton.style.display = 'none';
       }
