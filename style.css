@@ -127,14 +127,7 @@ main{
     transform: scale(1.1);
 }
 
-.infoText p:first-child {
-    font-weight: bold;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    display: none;
-}
-
-.infoText p:last-child {
+.infoText p {
     margin: 20px;
     margin-top: 0px;
     font-size: .8rem;
@@ -290,13 +283,11 @@ a {
 
 
 @media (max-width: 500px) {
-    .upArrow a{
-        display: none;
+    .upArrow{
         left: calc(92%/2);
     } 
     
-    .downArrow a{
-        display: none;
+    .downArrow{
         left: calc(87%/2);
     }
 
@@ -360,6 +351,15 @@ a {
 
     .footer{
         display: none;
+    }
+
+    .footerMobile{
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: .8rem;
+        background-color: #313131;
+        padding: 15px 0;
     }
 }
 

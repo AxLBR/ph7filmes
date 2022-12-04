@@ -53,18 +53,51 @@ document.addEventListener('DOMContentLoaded', () =>
   }));
 
 //Botões de navegação
-let downArrowButton = document.querySelector('.downArrow');
-let upArrowButton = document.querySelector('.upArrow');
+$(document).ready(function() {
+  const menuBtn = $('.scroll');
+  menuBtn.click(() => {
+    setTimeout(() => {
+      let downArrowButton = document.querySelector('.downArrow');
+      let upArrowButton = document.querySelector('.upArrow');
 
-downArrowButton.addEventListener("click", () => {
-    downArrowButton.style.display = 'none';
-    upArrowButton.style.display = 'block';
+      if(downArrowButton.style.display != 'none'){
+        console.log('Entrou no block')
+        downArrowButton.style.display = 'none';
+        upArrowButton.style.display = 'block';
+      } else {
+        console.log('Entrou no block2')
+        downArrowButton.style.display = 'block';
+        upArrowButton.style.display = 'none';
+      }
+
+      removeHash();      
+    }, 5);
+  })
 });
 
-upArrowButton.addEventListener("click", () => {
-    downArrowButton.style.display = 'block';
-    upArrowButton.style.display = 'none';
+//Remove o # do link da página
+function removeHash (){
+  history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+//Da o scroll de forma suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
 });
+
+//Adiciona ano nos rodapés
+document.querySelectorAll('.year').forEach(rodape => {
+  const d = new Date();
+  let year = d.getFullYear();
+
+  rodape.innerHTML = year;
+})
 
 //Abre video na modal
 function openVideo (key){
