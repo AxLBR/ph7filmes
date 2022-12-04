@@ -284,12 +284,12 @@ a {
 
 @media (max-width: 500px) {
     .upArrow{
-        display: none;
+        display: block !important;
         left: calc(92%/2);
     } 
     
     .downArrow{
-        display: none;
+        display: none !important;
         left: calc(87%/2);
     }
 

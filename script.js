@@ -117,4 +117,12 @@ function closeModal (){
     videoIframe.src = '';
 }
 
+//Reseta medidas da página para o mobile
+function resetHeight(){
+  document.body.style.height = window.innerHeight + "px";
+}
+
+window.addEventListener("resize", resetHeight);
+resetHeight();
+
 
