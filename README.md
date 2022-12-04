@@ -1,6 +1,6 @@
 # PH7 Filmes - Site
 
-![preview](./images/preview.jpg)
+![preview](./images/preview.JPG)
 
 Projeto desenvolvido como exercício de estudos para a produtora PH7 Filmes.
 
