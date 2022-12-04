@@ -363,29 +363,39 @@ a {
     }
 }
 
-@media (max-height: 750px) {
-    header {
-        height: 19.5vh;
-    }
-
-    main {
-        height: 73.5vh;
-    }
-}
-
-@media (max-height: 670px) {
-    header {
-        height: 21vh;
-    }
-}
-
-@media (max-width: 300px) {
+@media (max-width: 375px) {
     .infoText p:last-child {
         line-height: 15px;
     }
 
     header {
-        height: 25vh;
+        height: 19vh;
+    }
+
+    main{
+        height: 81vh;
+    }
+}
+
+@media (max-width: 280px) {
+    .contact{
+        gap: 0.9rem;
+    }
+
+    .logo a img{
+        width: 81px;
+    }
+
+    .email a img, .insta a img, .phone a img{
+        width: 28px;
+    }
+
+    header{
+        height: 21vh;
+    }
+
+    main{
+        height: 79vh;
     }
 }
 
